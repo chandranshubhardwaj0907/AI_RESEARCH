@@ -1,0 +1,130 @@
+[
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "google.generativeai",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "google.generativeai",
+        "description": "google.generativeai",
+        "detail": "google.generativeai",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "QuestionRequest",
+        "importPath": "models.request",
+        "description": "models.request",
+        "isExtraImport": true,
+        "detail": "models.request",
+        "documentation": {}
+    },
+    {
+        "label": "QuestionRequest",
+        "importPath": "models.request",
+        "description": "models.request",
+        "isExtraImport": true,
+        "detail": "models.request",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "post",
+        "importPath": "requests",
+        "description": "requests",
+        "isExtraImport": true,
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "ask_gemini",
+        "importPath": "services.gemini_service",
+        "description": "services.gemini_service",
+        "isExtraImport": true,
+        "detail": "services.gemini_service",
+        "documentation": {}
+    },
+    {
+        "label": "QuestionRequest",
+        "kind": 6,
+        "importPath": "Backend.models.request",
+        "description": "Backend.models.request",
+        "peekOfCode": "class QuestionRequest(BaseModel):\n    question: str",
+        "detail": "Backend.models.request",
+        "documentation": {}
+    },
+    {
+        "label": "ask_gemini",
+        "kind": 2,
+        "importPath": "Backend.services.gemini_service",
+        "description": "Backend.services.gemini_service",
+        "peekOfCode": "def ask_gemini(prompt: str) -> str:\n    response = model.generate_content(prompt)\n    return response.text",
+        "detail": "Backend.services.gemini_service",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "Backend.services.gemini_service",
+        "description": "Backend.services.gemini_service",
+        "peekOfCode": "model = genai.GenerativeModel(\"gemini-2.5-flash\")\ndef ask_gemini(prompt: str) -> str:\n    response = model.generate_content(prompt)\n    return response.text",
+        "detail": "Backend.services.gemini_service",
+        "documentation": {}
+    },
+    {
+        "label": "read_root",
+        "kind": 2,
+        "importPath": "Backend.venv.main",
+        "description": "Backend.venv.main",
+        "peekOfCode": "def read_root():\n    return {\"message\": \"Backend is running\"}\n@app.post(\"/ask\")\ndef ask_question(data: QuestionRequest):\n    ai_answer = ask_gemini(data.question)\n    return {\n        \"question\": data.question,\n        \"ai_answer\": ai_answer\n    }",
+        "detail": "Backend.venv.main",
+        "documentation": {}
+    },
+    {
+        "label": "ask_question",
+        "kind": 2,
+        "importPath": "Backend.venv.main",
+        "description": "Backend.venv.main",
+        "peekOfCode": "def ask_question(data: QuestionRequest):\n    ai_answer = ask_gemini(data.question)\n    return {\n        \"question\": data.question,\n        \"ai_answer\": ai_answer\n    }",
+        "detail": "Backend.venv.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "Backend.venv.main",
+        "description": "Backend.venv.main",
+        "peekOfCode": "app = FastAPI()\n@app.get(\"/\")\ndef read_root():\n    return {\"message\": \"Backend is running\"}\n@app.post(\"/ask\")\ndef ask_question(data: QuestionRequest):\n    ai_answer = ask_gemini(data.question)\n    return {\n        \"question\": data.question,\n        \"ai_answer\": ai_answer",
+        "detail": "Backend.venv.main",
+        "documentation": {}
+    }
+]
